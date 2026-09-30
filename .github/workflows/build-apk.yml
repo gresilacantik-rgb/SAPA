@@ -20,6 +20,11 @@ jobs:
           distribution: temurin
           java-version: '17'
 
+      - name: Siapkan Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.9'
+
       - name: Build APK SAPA
         run: gradle assembleDebug
 
